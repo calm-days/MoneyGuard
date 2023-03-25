@@ -1,9 +1,4 @@
-//
-//  AddView.swift
-//  iExpense App
-//
-//  Created by Roman Liukevich on 8/28/22.
-//
+
 
 import SwiftUI
 

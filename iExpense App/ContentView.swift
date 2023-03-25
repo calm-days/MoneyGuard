@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  iExpense App
-//
-//  Created by Roman Liukevich on 8/28/22.
-//
+
 
 import SwiftUI
 
@@ -48,22 +43,37 @@ struct ContentView: View {
                 .onDelete(perform: removeItems)
                 
             }
-            .navigationTitle("iExpense")
-            .toolbar {
-                Button {
-                   
-                    showingAddExpense = true
-                } label: {
-                    Image(systemName: "plus")
-                        .foregroundColor(.orange)
-                }
-            }
+            .navigationTitle("MoneyGuard")
+            .navigationBarItems(trailing: EditButton())
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button {
+//
+//
+//
+//                        showingAddExpense = true
+//                    } label: {
+//                        Image(systemName: "plus")
+//                            .foregroundColor(.orange)
+//                    }
+//                }
+//
+//            }
             .sheet(isPresented: $showingAddExpense) {
                 AddView(expenses: expenses)
             }
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     HStack {
+                        Button {
+                            
+                           
+                            
+                            showingAddExpense = true
+                        } label: {
+                            Image(systemName: "plus")
+                                .foregroundColor(.white)
+                        }
                         Spacer()
                         VStack(alignment: .leading) {
                             Text("Total: ")
